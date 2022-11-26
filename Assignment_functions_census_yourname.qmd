@@ -1,11 +1,15 @@
 ---
 title: "R Assignment - Initial Functions and APIs"
-author: "Your Name Here"
+author: "Amanda Plocharski"
 date: "`r format(Sys.time(), '%B %d, %Y')`"
 format:
   html:
     self-contained: true
 ---
+
+install.packages("nycflights13")
+install.packages("tidycensus")
+install.packages("writexl")
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
@@ -30,8 +34,12 @@ options(tigris_class = "sf")
 
 ```{r}
 
+x <- 10
+y <- 15
 
+z <- x+y
 
+print(z)
 
 
 ```
@@ -40,9 +48,9 @@ options(tigris_class = "sf")
 
 ```{r}
 
-
-
-
+mean_vector <- c(3, 5, 8, 50, 60, 100)
+result.mean <- mean(mean_vector)
+print(result.mean)
 
 
 ```
@@ -52,8 +60,14 @@ options(tigris_class = "sf")
 
 ```{r}
 
+mean_vector <- c(3, 5, 8, 50, 60, 100)
+result.mean <- mean(mean_vector)
 
+mean_function <- function(result.mean)
 
+result <- paste0("The mean is", mean_function)
+  
+print(result)
 
 
 ```
@@ -72,7 +86,9 @@ head(flights)
 ```{r}
 
 
-
+flights_vector <- (nycflights13) %>%
+flights_function <- function(origin)
+print(flights_function)
 
 
 
